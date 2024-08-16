@@ -6,6 +6,9 @@ const pool = new Pool({
   database: 'message_lpr0',
   password: 'VG2bk2LyIZqSbPRfcG2TTpt9xwE77lch',
   port: 5432,
+  ssl: {
+    rejectUnauthorized: false,
+  }
 });
 
 const query = (text, params) => pool.query(text, params);
